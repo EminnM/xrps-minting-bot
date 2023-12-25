@@ -70,7 +70,7 @@ while True:
         result = tx_response.result
 
         hash_value = result.get("hash", "N/A")
-        xrp_balance = int(result.get("meta","N/A")['AffectedNodes'][0]['ModifiedNode']['FinalFields']['Balance'])/1000000
+        #xrp_balance = int(result.get("meta","N/A")['AffectedNodes'][0]['ModifiedNode']['FinalFields']['Balance'])/1000000
 
         current_date_time = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
 
@@ -85,6 +85,6 @@ while True:
         except:
             pass
 
-        print(f"XRP Balance:{xrp_balance}")
+        #print(f"XRP Balance:{xrp_balance}")
         print(f"Date:{current_date_time}")
         print("--------------------------------")
