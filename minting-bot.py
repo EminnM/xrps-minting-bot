@@ -23,7 +23,7 @@ ascii =r'''
 '''
 
 print(ascii)
-print("to get your private key https://secret-numbers-to-family-seed.xumm.dev/ enter your xaman wallet numbers here to get your secret key, not affiliated, use at your own risk")
+#to get your private key https://secret-numbers-to-family-seed.xumm.dev/ enter your xaman wallet numbers here to get your secret key, not affiliated, use at your own risk
 key = pwinput.pwinput("Enter your private key:")
 
 JSON_RPC_URL = "https://s1.ripple.com:51234/"
