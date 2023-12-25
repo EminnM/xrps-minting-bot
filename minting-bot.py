@@ -11,6 +11,7 @@ import pwinput
 from xrpl.transaction import submit_and_wait
 from xrpl.models.requests import LedgerCurrent
 from xrpl.models.requests.account_info import AccountInfo
+import time
 
 ascii =r'''
 
@@ -59,32 +60,35 @@ acct_info = AccountInfo(
 temp = 0
 
 while True:
-    response = client.request(acct_info)
-    result = response.result
-    #result["ledger_index"])
-    if int(result["ledger_index"]) - temp > 100:
-        temp = int(result["ledger_index"])
-        tx_response = submit_and_wait(my_tx_payment, client, wallet)
+    try:
+        response = client.request(acct_info)
+        result = response.result
+        #result["ledger_index"])
+        if int(result["ledger_index"]) - temp > 100:
+            temp = int(result["ledger_index"])
+            tx_response = submit_and_wait(my_tx_payment, client, wallet)
 
-        #print(tx_response)
-        result = tx_response.result
+            #print(tx_response)
+            result = tx_response.result
 
-        hash_value = result.get("hash", "N/A")
-        #xrp_balance = int(result.get("meta","N/A")['AffectedNodes'][0]['ModifiedNode']['FinalFields']['Balance'])/1000000
+            hash_value = result.get("hash", "N/A")
+            #xrp_balance = int(result.get("meta","N/A")['AffectedNodes'][0]['ModifiedNode']['FinalFields']['Balance'])/1000000
 
-        current_date_time = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+            current_date_time = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
 
 
-        print(f"Block:{temp}")
-        print(f"Transaction Hash:{hash_value}")
+            print(f"Block:{temp}")
+            print(f"Transaction Hash:{hash_value}")
 
-        try:
-            a = requests.get(f"https://api.xrpscript.com/balance/{wallet.address}")
-            bal = int(a.json()["result"]["balance"])/1000000
-            print(f"Minted Tokens:{bal}")
-        except:
-            pass
+            try:
+                a = requests.get(f"https://api.xrpscript.com/balance/{wallet.address}")
+                bal = int(a.json()["result"]["balance"])/1000000
+                print(f"Minted Tokens:{bal}")
+            except:
+                pass
 
-        #print(f"XRP Balance:{xrp_balance}")
-        print(f"Date:{current_date_time}")
-        print("--------------------------------")
+            #print(f"XRP Balance:{xrp_balance}")
+            print(f"Date:{current_date_time}")
+            print("--------------------------------")
+    except:
+        print("An error has occured. Will try 60 seconds later again.")
