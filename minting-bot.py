@@ -92,3 +92,4 @@ while True:
             print("--------------------------------")
     except:
         print("An error has occured. Will try 60 seconds later again.")
+        time.sleep(60)
