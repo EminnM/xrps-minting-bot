@@ -43,7 +43,7 @@ I am not affiliated with the website. Use at your own risk.
         ```bash
         git clone https://github.com/EminnM/xrps-minting-bot
         cd xrps-minting-bot
-        minting_bot.py
+        minting-bot.py
         ```
         #### If you don't
        Navigate to the GitHub repository.
@@ -53,7 +53,7 @@ I am not affiliated with the website. Use at your own risk.
        Open the terminal and navigate to the extracted folder:
        ```bash
        cd path/to/xrps-minting-bot
-       minting_bot.py
+       minting-bot.py
        ```
 
        
@@ -101,7 +101,7 @@ I am not affiliated with the website. Use at your own risk.
         ```bash
         git clone https://github.com/EminnM/xrps-minting-bot
         cd xrps-minting-bot
-        python3 minting_bot.py
+        python3 minting-bot.py
         ```
      #### If you don't
       Navigate to the GitHub repository.
@@ -114,7 +114,7 @@ I am not affiliated with the website. Use at your own risk.
        ```
        To run the bot
        ```bash
-       python3 minting_bot.py
+       python3 minting-bot.py
         ```
 
 
