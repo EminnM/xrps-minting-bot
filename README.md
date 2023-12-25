@@ -38,6 +38,7 @@ I am not affiliated with the website. Use at your own risk.
          and then
          ```bash
          pip install pwinput
+         pip install requests
          ```
         #### If you have git installed
         ```bash
@@ -94,7 +95,7 @@ I am not affiliated with the website. Use at your own risk.
      and then
       ```bash
      pip install pwinput
-
+     pip install requests
      ```
       #### If you have git installed
 
