@@ -128,24 +128,6 @@ I am not affiliated with the website. Use at your own risk.
 
 That's it
 
-## Donate
-
-If you find this project helpful and would like to support its development, you can make a donation using one of the following cryptocurrencies:
-
-### Solana (SOL)
-
-Solana Address: `2RPXEvbxwMtJf9pk72riDS4JTfNUKPG3HhTNhwos9Eiz`
-
-### XRP (XRP)
-
-XRP Address: `rLSLSfsaQpfsdxGuiLso8tE9HtyBqQQfJN`
-
-### Ethereum (ETH)
-
-Ethereum Address: `0xfca401bA530777809841d56508083522c24C2BEe`
-
-Your contributions are greatly appreciated!
-
 
 
 
